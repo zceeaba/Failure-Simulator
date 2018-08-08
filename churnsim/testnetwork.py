@@ -3,6 +3,8 @@ import networkx as nx
 number_of_nodes = 10
 G = nx.complete_graph(number_of_nodes)
 
+print(G.nodes)
+
 import random
 from nxsim import BaseNetworkAgent
 

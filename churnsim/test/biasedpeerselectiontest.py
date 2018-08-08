@@ -16,5 +16,5 @@ failurenode=random.randint(0,numberofnodes)
 
 failurestates[failurenode]=1
 
-sim=NetworkSimulation(topology=,agent_type=,states=,environment_agent=,dir_path=,
+sim=NetworkSimulation(topology=G,agent_type=randompeerselection,states=,environment_agent=,dir_path=,
                       num_trials=,max_time=,logging_interval=)

@@ -186,5 +186,3 @@ class Topology(nx.Graph):
 
         return True
 
-    def bittorrenttopology(self):
-        
