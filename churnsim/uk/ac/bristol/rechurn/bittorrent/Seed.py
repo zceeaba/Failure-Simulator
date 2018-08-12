@@ -3,10 +3,12 @@ from churnsim.uk.ac.bristol.rechurn.bittorrent.messages import Upload, Request
 from churnsim.uk.ac.bristol.rechurn.bittorrent.Peer import Peer
 
 class Seed(Peer):
+
     def requests(self, peers, history):
         # Seeds don't need anything.
         return []
 
+    """
     def uploads(self, requests, peers, history):
         max_upload = 4  # max num of peers to upload to at a time
         requester_ids = list(set(map(lambda r: r.requester_id, requests)))
@@ -21,3 +23,4 @@ class Seed(Peer):
                    for (p_id, bw) in zip(random.sample(requester_ids, n), bws)]
 
         return uploads
+    """

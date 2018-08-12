@@ -4,9 +4,10 @@ from churnsim.uk.ac.bristol.rechurn.topology import Topology
 from nxsim import BaseNetworkAgent
 
 class biasedpeerfailure(BaseNetworkAgent):
-    def __init__(self,environment,agent_id=0,state=()):
+    def __init__(self,environment,hashdata,agent_id=0,state=()):
         super().__init__(environment=environment,agent_id=agent_id,state=state)
         self.datauploadmin=1000
+        self.hashdata=hashdata
 
     def run(self):
         while True:

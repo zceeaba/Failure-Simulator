@@ -3,28 +3,38 @@ from churnsim.uk.ac.bristol.rechurn.modes.p2p.randompeerselection import randomp
 from networkx import nx
 import random
 from collections import defaultdict
+from churnsim.uk.ac.bristol.rechurn.bittorrent.Peer import Peer
+import string
+import random
 
 numberofnodes=10
 G = nx.complete_graph(numberofnodes)
 
-failurestates=[dict() for x in range(numberofnodes)]
+nodes=[dict() for x in range(numberofnodes)]
 
 keys=range(numberofnodes)
 
 for i in keys:
-    failurestates[i]["piecesize"]=0
-    failurestates[i]["id"]=0
-
-failurenode=random.randint(0,numberofnodes)
-
-failurestates[failurenode]["piecesize"]=1
-failurestates[failurenode]["id"]=1
-
-print(failurestates)
+    nodes[i]["pieces"]=[]
+    nodes[i]["id"]=0
+    nodes[i]["peerid"]=i
+    nodes[i]["downloadlist"]=[]
+    nodes[i]["uploadlist"]=[]
 
 
+seednode=random.randint(0,numberofnodes)
 
-sim=NetworkSimulation(topology=G,agent_type=randompeerfailure,states=failurestates,
-                     num_trials=30,max_time=30,logging_interval=1.0)
+hashdata=string.ascii_letters
+
+for i in range(10):
+    piece={"pieceid":random.choice(hashdata),"piecesize":0.1}
+    nodes[seednode]["pieces"].append(piece)
+
+nodes[seednode]["id"]=1
+
+
+sim=NetworkSimulation(topology=G,agent_type=randompeerfailure,states=nodes,
+                     num_trials=3,max_time=10,logging_interval=1.0)
+
 
 sim.run_simulation()
