@@ -7,7 +7,7 @@ from churnsim.uk.ac.bristol.rechurn.bittorrent.Peer import Peer
 import string
 import random
 
-numberofnodes=10
+numberofnodes=3000
 G = nx.complete_graph(numberofnodes)
 
 nodes=[dict() for x in range(numberofnodes)]

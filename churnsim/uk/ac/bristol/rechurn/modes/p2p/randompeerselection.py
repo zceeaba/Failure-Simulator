@@ -43,7 +43,7 @@ class randompeerfailure(BaseNetworkAgent):
                 seedlist.append(i)
         if len(seedlist)>1:
             rdindex=random.randint(0,(len(seedlist)-1))
-            print(rdindex)
+            #print(rdindex)
             self.makealink(neighbor,seedlist[rdindex])
         else:
             self.makealink(neighbor,seedlist[0])
