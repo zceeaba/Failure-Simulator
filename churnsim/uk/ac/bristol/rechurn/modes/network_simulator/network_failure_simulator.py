@@ -2,6 +2,8 @@
 #https://arxiv.org/ftp/arxiv/papers/1608/1608.03770.pdf
 #https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41315.pdf
 #https://github.com/subinjp/edgecomputing/blob/master/pdfs/A_Survey_on_Mobile_Edge_Computing.pdf
+#https://www.isi.edu/~johnh/PAPERS/Heidemann18b.pdf
+#https://www.researchgate.net/publication/224504245_Graph-Based_P2P_Traffic_Classification_at_the_Internet_Backbone
 
 from pprint import pprint
 import networkx as nx
@@ -37,6 +39,7 @@ nx.draw(G)
 plt.show()
 
 newtopology=G.copy()
+deletelist=[]
 for link in links:
 	link_to_remove_1 = (link[0], link[1])
 	link_to_remove_2 = (link[1], link[0])
@@ -48,8 +51,11 @@ for link in links:
 	G.add_edge(*link_to_remove_1)
 	G.add_edge(*link_to_remove_2)
 	print(link_to_remove_1,link_to_remove_2)
-	newtopology.remove_edge(*link_to_remove_1)
-	newtopology.remove_edge(*link_to_remove_2)
+	#if wc_link_util[link_to_remove_1][]
+	for i in wc_link_util[link_to_remove_1]:
+		if wc_link_util[link_to_remove_1][i]>=10 and (i not in deletelist):
+			newtopology.remove_edge(*i)
+			deletelist.append(i)
 	pos = nx.spring_layout(newtopology)
 	nx.draw(newtopology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
 	plt.show()

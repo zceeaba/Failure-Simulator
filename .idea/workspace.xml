@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f1d36c19-c2df-4afd-83be-9c93a0253266" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/churnsim/test/random_failure_test.py" afterPath="$PROJECT_DIR$/churnsim/test/random_failure_test.py" />
-      <change beforePath="$PROJECT_DIR$/churnsim/test/topology_result.png" afterPath="$PROJECT_DIR$/churnsim/test/topology_result.png" />
-      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/Gnutella/main.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/Gnutella/main.py" />
-      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/failure_mode.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/failure_mode.py" />
-      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/graph_methods.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/graph_methods.py" />
       <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/network_failure_simulator.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/network_failure_simulator.py" />
-      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/topology_result.png" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/topology_result.png" />
       <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/wc_results.txt" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/wc_results.txt" />
-      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/random_mode.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/random_mode.py" />
-      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/roundrobin.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/roundrobin.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +16,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Failure_Simulator$Unittests_in_random_failure_test_py.coverage" NAME="Unittests in random_failure_test.py Coverage Results" MODIFIED="1534366949660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/test" />
     <SUITE FILE_PATH="coverage/Failure_Simulator$randompeerselectiontest.coverage" NAME="randompeerselectiontest Coverage Results" MODIFIED="1534279984661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/test" />
-    <SUITE FILE_PATH="coverage/Failure_Simulator$network_failure_simulator.coverage" NAME="network_failure_simulator Coverage Results" MODIFIED="1534517181840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator" />
+    <SUITE FILE_PATH="coverage/Failure_Simulator$network_failure_simulator.coverage" NAME="network_failure_simulator Coverage Results" MODIFIED="1534518916432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator" />
     <SUITE FILE_PATH="coverage/Failure_Simulator$readpickle.coverage" NAME="readpickle Coverage Results" MODIFIED="1533672920325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/sim_01" />
     <SUITE FILE_PATH="coverage/Failure_Simulator$main.coverage" NAME="main Coverage Results" MODIFIED="1534362719301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/Gnutella" />
     <SUITE FILE_PATH="coverage/Failure_Simulator$testsimulator.coverage" NAME="testsimulator Coverage Results" MODIFIED="1534270124217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim" />
@@ -43,20 +35,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="network_failure_simulator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="network_failure_simulator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/network_failure_simulator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="53" column="74" lean-forward="false" selection-start-line="53" selection-start-column="74" selection-end-line="53" selection-end-column="74" />
+            <state relative-caret-position="1026">
+              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding>
-                <element signature="e#314#339#0" expanded="true" />
+                <element signature="e#482#507#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pe_traffic.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pe_traffic.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/pe_traffic.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wc_results.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/wc_results.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -138,6 +140,7 @@
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/graph_methods.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/links.txt" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/network_failure_simulator.py" />
+        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/pe_traffic.txt" />
       </list>
     </option>
   </component>
@@ -472,7 +475,7 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="52" />
+      <option name="time" value="53" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -831,26 +834,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/pe_traffic.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/links.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/wc_results.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -865,13 +852,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/wc_results.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/network_failure_simulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="53" column="74" lean-forward="false" selection-start-line="53" selection-start-column="74" selection-end-line="53" selection-end-column="74" />
+        <state relative-caret-position="1026">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
           <folding>
-            <element signature="e#314#339#0" expanded="true" />
+            <element signature="e#482#507#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/network_simulator/pe_traffic.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
