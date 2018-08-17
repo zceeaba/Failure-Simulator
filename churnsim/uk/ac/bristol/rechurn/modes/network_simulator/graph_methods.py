@@ -58,6 +58,8 @@ class GraphSolve(object):
 	def Worst_Case_Util(self,wc_link_util):
 		dict_final = {}
 		wc_failures = {}
+		print(wc_link_util)
+
 		for failure, link_utilisations in wc_link_util.items():
 			for link, volume in link_utilisations.items():
 				if link in dict_final and int(dict_final[link]) < int(volume):
@@ -68,6 +70,7 @@ class GraphSolve(object):
 					dict_final[link] = volume
 					total = str(link) + str(-volume)
 					wc_failures[total] = failure
+
 		return wc_failures
 			
 			

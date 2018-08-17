@@ -7,6 +7,7 @@ class TestRandomFailure(unittest.TestCase):
     def test_random(self):
         top = Topology()
         loaded = top.load_from_csvs('../nodes.csv','../edges.csv')
+        #loaded=top.load_from_google()
         self.assertTrue(loaded)
         random_failure = RandomFailures()
         failed_top = random_failure.get_new_topology(top)

@@ -5,7 +5,7 @@ import networkx as nx
 
 RANDOM_SEED = 42
 #peers = 50  # Number of tickets per movie
-SIM_TIME = 10000  # Simulate until
+SIM_TIME = 100000  # Simulate until
 
 def sessionlengthfailure(env,peer,bandwidth,gnutella):
     with gnutella.counter.request() as peer_turn:

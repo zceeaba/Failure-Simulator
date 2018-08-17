@@ -3,7 +3,7 @@ from churnsim.uk.ac.bristol.rechurn.topology import Topology
 import random
 
 
-class RandomFailures(FailureMode):
+class RoundRobinFailures(FailureMode):
 
     def get_new_topology(self, topology):
         if not isinstance(topology, Topology):
