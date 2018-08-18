@@ -1,9 +1,6 @@
 from nxsim import NetworkSimulation
-from churnsim.uk.ac.bristol.rechurn.modes.p2p.randompeerselection import randompeerfailure
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.bittorrent import randompeerfailure
 from networkx import nx
-import random
-from collections import defaultdict
-from churnsim.uk.ac.bristol.rechurn.bittorrent.Peer import Peer
 import string
 import random
 

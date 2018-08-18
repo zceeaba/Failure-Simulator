@@ -1,5 +1,5 @@
 from churnsim.uk.ac.bristol.rechurn.topology import Topology
-from churnsim.uk.ac.bristol.rechurn.modes.random_mode import RandomFailures
+from churnsim.uk.ac.bristol.rechurn.modes.SelectionBasedFailures.random_mode import RandomFailures
 import unittest
 
 class TestRankBasedFailure(unittest.TestCase):

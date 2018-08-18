@@ -3,6 +3,8 @@ import random
 import simpy
 import networkx as nx
 
+#http://iptps06.cs.ucsb.edu/papers/Guha-skype06.pdf
+
 RANDOM_SEED = 42
 #peers = 50  # Number of tickets per movie
 SIM_TIME = 100000  # Simulate until

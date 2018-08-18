@@ -1,5 +1,5 @@
 from churnsim.uk.ac.bristol.rechurn.topology import Topology
-from churnsim.uk.ac.bristol.rechurn.modes.hardware import hardwarefailure
+from churnsim.uk.ac.bristol.rechurn.modes.DataBasedFailures.hardware import hardwarefailure
 top = Topology()
 testnodejson=top.load_from_json()
 hard_failure = hardwarefailure()

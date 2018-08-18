@@ -1,5 +1,5 @@
 from churnsim.uk.ac.bristol.rechurn.topology import Topology
-from churnsim.uk.ac.bristol.rechurn.modes.random_mode import RandomFailures
+
 top = Topology()
 googlenode=top.load_from_google()
 #testnodejson=top.load_from_json()

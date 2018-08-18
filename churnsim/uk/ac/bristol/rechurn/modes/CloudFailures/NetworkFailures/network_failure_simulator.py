@@ -9,7 +9,7 @@ from pprint import pprint
 import networkx as nx
 import matplotlib.pyplot as plt
 import re
-from churnsim.uk.ac.bristol.rechurn.modes.network_simulator import graph_methods
+from churnsim.uk.ac.bristol.rechurn.modes.CloudFailures.NetworkFailures import graph_methods
 
 G = nx.DiGraph() #Create an empty graph with no nodes and no edges.
 links_file = open('links.txt',"r") #specify location of the links file

@@ -1,4 +1,3 @@
-from churnsim.uk.ac.bristol.rechurn.bittorrent.messages import Upload,Download
 class Peer:
     def __init__(self,id,init_pieces,up_bandwidth):
         #self.conf=config

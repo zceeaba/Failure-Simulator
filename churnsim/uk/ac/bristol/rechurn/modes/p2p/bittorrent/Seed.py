@@ -1,6 +1,4 @@
-import random
-from churnsim.uk.ac.bristol.rechurn.bittorrent.messages import Upload, Request
-from churnsim.uk.ac.bristol.rechurn.bittorrent.Peer import Peer
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.bittorrent import Peer
 
 class Seed(Peer):
 
