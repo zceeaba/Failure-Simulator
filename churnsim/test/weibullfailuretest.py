@@ -1,5 +1,5 @@
 from churnsim.uk.ac.bristol.rechurn.topology import Topology
-from churnsim.uk.ac.bristol.rechurn.modes.CloudFailures.DistributionBased.weibull import weibullfailures
+from churnsim.uk.ac.bristol.rechurn.modes.CloudFailures.DistributionBased.DiskFailures import weibullfailures
 
 wb=weibullfailures(True)
 top = Topology()

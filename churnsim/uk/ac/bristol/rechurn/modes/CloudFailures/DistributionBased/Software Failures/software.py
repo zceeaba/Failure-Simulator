@@ -6,7 +6,6 @@
 
 from churnsim.uk.ac.bristol.rechurn.failure_mode import FailureMode
 from churnsim.uk.ac.bristol.rechurn.topology import Topology
-import numpy as np
 import random
 import networkx as nx
 from matplotlib import pyplot as plt
