@@ -56,6 +56,5 @@ class softwarefailure(FailureMode):
 
 
 
-
         return topology
 
