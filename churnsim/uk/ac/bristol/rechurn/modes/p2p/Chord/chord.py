@@ -1,13 +1,17 @@
 from churnsim.uk.ac.bristol.rechurn.failure_mode import FailureMode
 from churnsim.uk.ac.bristol.rechurn.topology import Topology
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.Node import Node
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.key import key
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.ring import ring
+
+
 import numpy as np
 import random
 import networkx as nx
 from matplotlib import pyplot as plt
-import hashlib
 
-#https://www.inf.ed.ac.uk/teaching/courses/es/PDFs/lecture_9.pdf
-#https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201209ra1.html
+##https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf
+
 
 class ChordFailures(FailureMode):
 
@@ -16,9 +20,8 @@ class ChordFailures(FailureMode):
         nx.draw(topology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
         plt.show()
 
-    def chord_hash(self,keystring):
-        hashedobj=hashlib.sha1(keystring)
-        return hashedobj.hexdigest()
+    def assignkeytonode(self,key,Node):
+
 
     def get_new_topology(self, topology):
         if not isinstance(topology, Topology):
@@ -26,5 +29,7 @@ class ChordFailures(FailureMode):
 
         new_topology = topology.copy()
         to_be_deleted = []
+
+
 
 

@@ -1,5 +1,5 @@
 from nxsim import NetworkSimulation
-from churnsim.uk.ac.bristol.rechurn.modes.p2p.bittorrent import randompeerfailure
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.bittorrent.randompeerselection import randompeerfailure
 from networkx import nx
 import string
 import random

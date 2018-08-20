@@ -10,16 +10,20 @@ class GraphSolve(object):
 		self.pe_nodes = pe_nodes #list of all unique PE nodes
 		self.pe_demands = pe_demands #list of PE to PE demands
 		
-	def Gravity(self,pe_traffic):
+	def Gravity(self,pe_traffic,autotraffic):
 		'''demands are calculated from pe_traffic file'''
 		traffic = {} # dictionary of arrays representing out and in traffic for every PE.
 		demands_file = open(pe_traffic,"r").readlines()
 		firstLine = demands_file.pop(0)
+		count=0
 		for line in demands_file:
 			pe,traffic_in,traffic_out = line.split(",")
 			self.pe_nodes.append(pe)
-			traffic[pe] = [traffic_out,traffic_in]
-			self.all_pe_out = self.all_pe_out + int(traffic_out)
+			#traffic[pe] = [traffic_out,traffic_in]
+			traffic[pe]=[str(autotraffic[count]),traffic_in]
+			#self.all_pe_out = self.all_pe_out + int(traffic_out)
+			self.all_pe_out=self.all_pe_out+autotraffic[count]
+			count+=1
 		while len(self.pe_nodes) > 1: # produces PE to PE full demand mesh
 			for i in range (0,len(self.pe_nodes)-1):
 				self.pe_demands.append ((self.pe_nodes[0], self.pe_nodes[i+1]))
