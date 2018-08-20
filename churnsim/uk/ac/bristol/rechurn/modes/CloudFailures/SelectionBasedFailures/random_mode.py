@@ -12,6 +12,10 @@ class RandomFailures(FailureMode):
         if not isinstance(topology, Topology):
             raise ValueError('topology argument is not of type ' + type(topology))
         count=0
+        pos = nx.spring_layout(topology)
+        nx.draw(topology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
+        plt.show()
+
         while count<10:
             num_nodes = (random.randint(0, len(topology.nodes)))
             if num_nodes < 10:
@@ -21,8 +25,6 @@ class RandomFailures(FailureMode):
             new_topology = topology.copy()
 
             nodes=topology.nodes
-            nx.draw(topology)
-            plt.show()
 
             """
             pos = nx.spring_layout(topology)
@@ -46,8 +48,10 @@ class RandomFailures(FailureMode):
             for n in to_be_deleted:
                 new_topology.remove_node(n)
 
-            nx.draw(new_topology)
+            pos = nx.spring_layout(topology)
+            nx.draw(topology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
             plt.show()
+
             topology=new_topology
             count+=1
 

@@ -66,14 +66,14 @@ class weibullfailures(FailureMode):
         plt.show()
 
     def get_new_topology(self, topology):
-        if not isinstance(topology, Topology):
-            raise ValueError('topology argument is not of type ' + type(topology))
+        #if not isinstance(topology, Topology):
+         #   raise ValueError('topology argument is not of type ' + type(topology))
 
         new_topology = topology.copy()
         to_be_deleted = []
 
         failuretimes=self.mttf(len(topology.nodes))
-
+        deletelength=0
 
         if self.mttfalgorithm==True:
             t=0
@@ -83,8 +83,9 @@ class weibullfailures(FailureMode):
                 for i in failuretimes:
                     if failuretimes[i]==t:
                         new_topology.remove_node(nodeslist[count])
+                        deletelength+=1
                     count+=1
-                self.draw_topology(new_topology)
+                #self.draw_topology(new_topology)
                 t=t+1
 
         else:
@@ -105,4 +106,4 @@ class weibullfailures(FailureMode):
             for n in to_be_deleted:
                 new_topology.remove_node(n)
 
-        return failuretimes
+        return deletelength

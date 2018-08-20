@@ -40,7 +40,7 @@ class GossipNode:
         workloadsum=0
         for i in tasks:
             workloadsum+=i
-        tw=workloadsum/self.capacity
+        tw=(workloadsum/self.capacity)
         if tw>spannedtime:
             self.failure=1
         else:
