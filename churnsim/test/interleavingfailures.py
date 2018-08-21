@@ -7,15 +7,3 @@ wb=weibullfailures(True)
 top = Topology()
 #testnodejson=top.load_from_json()
 failurelist = []
-
-listofsizes=[i for i in range(500,10000,500)]
-for i in listofsizes:
-    testnodejson=nx.cycle_graph(i)
-    failurelist.append(wb.get_new_topology(testnodejson))
-print(failurelist)
-
-plt.plot(listofsizes,failurelist)
-plt.xlabel('number of nodes in graph')
-plt.ylabel('number of failures')
-plt.legend('')
-plt.show()

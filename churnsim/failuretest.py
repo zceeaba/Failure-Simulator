@@ -1,20 +1,27 @@
-import networkx as nx
-G=nx.Graph()
+import simpy
+import random
 
-G.add_node(1)
-G.add_nodes_from([2,3])
+ball_wait = random.expovariate(20)
 
-print(G.nodes)
+def racket(env, name, ball):
+    while True:
+        # Let the first user catch the ball
+        with ball.request() as req:  # Create a waiting resource
+            yield req   # Wait and get the ball
 
-H=nx.path_graph(10)
-print(H.nodes)
-#G.add_nodes_from(H)
+            # The time it takes for the ball to arrive. This can
+            # be used to plan the strategy of how to hit the ball.
+            yield env.timeout(ball_wait)
+            print(env.now, name)
 
-#print(G.nodes)
-G.add_node(H)
-G.add_edge(1,2)
-e=(2,3)
-G.add_edge(*e)
-G.add_edges_from([(1, 2), (1, 3)])
-print(G.nodes)
-print(G.edges)
+        # "Sleep" to get the other user have his turn.
+        yield env.timeout(0)
+
+env = simpy.Environment()
+ball = simpy.Resource(env, capacity = 1)
+
+env.process(racket(env, 'Ping', ball))
+env.process(racket(env, 'Pong', ball))
+
+env.run(until=10)
+print('Done!')
