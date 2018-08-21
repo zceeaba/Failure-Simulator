@@ -4,7 +4,7 @@ from networkx import nx
 import string
 import random
 
-numberofnodes=3000
+numberofnodes=100
 G = nx.complete_graph(numberofnodes)
 
 nodes=[dict() for x in range(numberofnodes)]
@@ -31,7 +31,7 @@ nodes[seednode]["id"]=1
 
 
 sim=NetworkSimulation(topology=G,agent_type=randompeerfailure,states=nodes,
-                     num_trials=3,max_time=10,logging_interval=1.0)
+                     num_trials=10,max_time=30,logging_interval=1.0)
 
 
 sim.run_simulation()

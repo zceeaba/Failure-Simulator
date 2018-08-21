@@ -20,9 +20,6 @@ class ChordFailures(FailureMode):
         nx.draw(topology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
         plt.show()
 
-    def assignkeytonode(self,key,Node):
-
-
     def get_new_topology(self, topology):
         if not isinstance(topology, Topology):
             raise ValueError('topology argument is not of type ' + type(topology))

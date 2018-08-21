@@ -79,7 +79,7 @@ class SoftwareFailures(FailureMode):
         plt.xlabel('capacity')
         plt.ylabel('number of node failures')
         plt.plot()
-        plt.show()
+        plt.savefig('software.png')
 
 
 

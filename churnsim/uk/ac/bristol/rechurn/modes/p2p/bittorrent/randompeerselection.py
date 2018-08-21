@@ -64,7 +64,7 @@ class randompeerfailure(BaseNetworkAgent):
 
 
         to_node.state["pieces"].append(chosenpeer)
-        print("addition")
+        #print("addition")
 
 
 

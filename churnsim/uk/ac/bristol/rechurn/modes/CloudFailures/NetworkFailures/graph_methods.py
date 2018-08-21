@@ -5,10 +5,10 @@ from pprint import pprint
 
 class GraphSolve(object):
 	
-	def __init__(self, all_pe_out = 0, pe_nodes = [],pe_demands = []): # constructor
+	def __init__(self, all_pe_out = 0, pe_nodes = [],pd = []): # constructor
 		self.all_pe_out = all_pe_out # total traffic from all PE nodes
 		self.pe_nodes = pe_nodes #list of all unique PE nodes
-		self.pe_demands = pe_demands #list of PE to PE demands
+		self.pd = pd #demands
 		
 	def Gravity(self,pe_traffic,autotraffic):
 		'''demands are calculated from pe_traffic file'''
@@ -26,12 +26,12 @@ class GraphSolve(object):
 			count+=1
 		while len(self.pe_nodes) > 1: # produces PE to PE full demand mesh
 			for i in range (0,len(self.pe_nodes)-1):
-				self.pe_demands.append ((self.pe_nodes[0], self.pe_nodes[i+1]))
-				self.pe_demands.append ((self.pe_nodes[i+1], self.pe_nodes[0]))
+				self.pd.append ((self.pe_nodes[0], self.pe_nodes[i+1]))
+				self.pd.append ((self.pe_nodes[i+1], self.pe_nodes[0]))
 			del self.pe_nodes[0]
 		#formula to calculate demand values: pe2_in*pe1_out/(all_pe_out-pe2_out)
 		demands_matrix = {}
-		for pe in self.pe_demands:
+		for pe in self.pd:
 			demand_value = int(traffic[pe[1]][1])*int(traffic[pe[0]][0])/(self.all_pe_out-int(traffic[pe[1]][0]))
 			demands_matrix.update({(pe[0],pe[1]):demand_value})
 		return demands_matrix
@@ -45,7 +45,7 @@ class GraphSolve(object):
 		
 	def Flows_to_Loads(self,flows,G):
 		'''
-		Maps the flows to the link utilisations
+		Dictionary pointing from the flows to the link utilisations
 		'''
 		dict_final = {}
 		shortest_path = []

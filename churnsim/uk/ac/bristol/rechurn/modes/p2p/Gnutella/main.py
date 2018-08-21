@@ -10,7 +10,7 @@ import networkx as nx
 
 RANDOM_SEED = 42
 #peers = 50  # Number of tickets per movie
-SIM_TIME = 2000  # Simulate until
+SIM_TIME = 1000  # Simulate until
 
 class UniqueDict(dict):
     def __setitem__(self, key, value):
@@ -38,7 +38,7 @@ def sessionlengthfailure(env,currenttime,peer,bandwidth,gnutella):
         if gnutella.downtime[peer]>SIM_TIME/2:
             gnutella.num_failures[peer]+=1
             gnutella.num_failures[peer]+=len(gnutella.available[peer])
-        
+
 
         """
         if len(gnutella.available[peer]:
