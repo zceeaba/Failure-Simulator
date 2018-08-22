@@ -10,7 +10,8 @@ import networkx as nx
 
 RANDOM_SEED = 42
 #peers = 50  # Number of tickets per movie
-SIM_TIME = 1000  # Simulate until
+times =[i for i in range(50,1000,50)]   # Simulate until
+faillist=[]
 
 class UniqueDict(dict):
     def __setitem__(self, key, value):
@@ -20,7 +21,7 @@ class UniqueDict(dict):
             raise KeyError("Key already exists")
 
 
-def sessionlengthfailure(env,currenttime,peer,bandwidth,gnutella):
+def sessionlengthfailure(env,currenttime,peer,bandwidth,gnutella,SIM_TIME):
     with gnutella.counter.request() as peer_turn:
         result= yield peer_turn| gnutella.failed[peer]
         if peer_turn not in result:
@@ -52,7 +53,7 @@ def sessionlengthfailure(env,currenttime,peer,bandwidth,gnutella):
 
 
 
-def peerarrivals(env,gnutella):
+def peerarrivals(env,gnutella,SIM_TIME):
     while True:
         yield env.timeout(random.expovariate(SIM_TIME/2))
 
@@ -67,7 +68,7 @@ def peerarrivals(env,gnutella):
 
 
         if gnutella.start_time[peer]<SIM_TIME/2 and gnutella.available[peer]:
-            env.process(sessionlengthfailure(env,currenttime,peer,bandwidth,gnutella))
+            env.process(sessionlengthfailure(env,currenttime,peer,bandwidth,gnutella,SIM_TIME))
 
 
 
@@ -90,55 +91,58 @@ response = urllib.request.urlopen('http://snap.stanford.edu/data/p2p-Gnutella09.
 with open('p2p-Gnutella09.txt', 'wb') as outfile:
     outfile.write(gzip.decompress(response.read()))
 
-g = nx.read_edgelist('p2p-Gnutella09.txt')
-#print_graph_stats("Gnutella p2p graph", g)
+for time in times:
+    SIM_TIME=time
 
-cg=None
-for sg in nx.connected_component_subgraphs(g):
-    if cg==None or len(sg.nodes())>len(cg.nodes()):
-        cg=sg
+    g = nx.read_edgelist('p2p-Gnutella09.txt')
+    #print_graph_stats("Gnutella p2p graph", g)
 
-#print_graph_stats("Gnutella p2p graph",cg)
-Gnutella=collections.namedtuple('Gnutella', 'counter, peers, available, '
-                                            'failed, when_failed, '
-                                            'num_failures,start_time,downtime,peerenter')
+    cg=None
+    for sg in nx.connected_component_subgraphs(g):
+        if cg==None or len(sg.nodes())>len(cg.nodes()):
+            cg=sg
 
-random.seed(RANDOM_SEED)
-env=simpy.Environment()
-counter = simpy.Resource(env, capacity=1)
+    #print_graph_stats("Gnutella p2p graph",cg)
+    Gnutella=collections.namedtuple('Gnutella', 'counter, peers, available, '
+                                                'failed, when_failed, '
+                                                'num_failures,start_time,downtime,peerenter')
 
-peers=cg.nodes
-edges=cg.edges
-available=UniqueDict()
+    random.seed(RANDOM_SEED)
+    env=simpy.Environment()
+    counter = simpy.Resource(env, capacity=1)
 
-for peer in peers:
-    available[peer]=[]
+    peers=cg.nodes
+    edges=cg.edges
+    available=UniqueDict()
 
-for x,y in edges:
-    available[x].append(y)
+    for peer in peers:
+        available[peer]=[]
 
-peerenter={peer:0 for peer in peers}
-start_time={peer:0 for peer in peers}
+    for x,y in edges:
+        available[x].append(y)
 
-downtime={peer:0 for peer in peers}
+    peerenter={peer:0 for peer in peers}
+    start_time={peer:0 for peer in peers}
 
-failed={peer:env.event() for peer in peers}
-when_failed={peer:None for peer in peers}
-num_failures={peer:0 for peer in peers}
+    downtime={peer:0 for peer in peers}
 
-gnutella = Gnutella(counter, peers, available, failed, when_failed,
-                  num_failures,start_time,downtime,peerenter)
+    failed={peer:env.event() for peer in peers}
+    when_failed={peer:None for peer in peers}
+    num_failures={peer:0 for peer in peers}
 
-
-env.process(peerarrivals(env, gnutella))
-env.run(until=SIM_TIME)
+    gnutella = Gnutella(counter, peers, available, failed, when_failed,
+                      num_failures,start_time,downtime,peerenter)
 
 
-sum=0
-for peer in peers:
-    sum+=gnutella.num_failures[peer]
+    env.process(peerarrivals(env, gnutella,SIM_TIME))
+    env.run(until=SIM_TIME)
 
-print(len(peers)-sum)
+
+    sum=0
+    for peer in peers:
+        sum+=gnutella.num_failures[peer]
+
+    faillist.append((len(peers)-sum))
 
 """"
 for peer in peers:
@@ -155,3 +159,7 @@ for i in failednodes:
 
 print(sum)
 """
+plt.plot(times,faillist)
+plt.xlabel('total simulation time')
+plt.ylabel('number of failures')
+plt.savefig('gnutellasessionlengthfailures.png')

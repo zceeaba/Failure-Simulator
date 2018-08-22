@@ -1,8 +1,9 @@
 from nxsim import NetworkSimulation
-from churnsim.uk.ac.bristol.rechurn.modes.p2p.bittorrent.randompeerselection import randompeerfailure
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.bittorrent.randompeerselection import randompeerfailure,faileddict
 from networkx import nx
 import string
 import random
+from matplotlib import pyplot as plt
 
 numberofnodes=100
 G = nx.complete_graph(numberofnodes)
@@ -17,6 +18,9 @@ for i in keys:
     nodes[i]["peerid"]=i
     nodes[i]["downloadlist"]=[]
     nodes[i]["uploadlist"]=[]
+    nodes[i]["peerarrivaltime"]=0
+    nodes[i]["downloadspeed"]=0
+    nodes[i]["uploadspeed"]=0
 
 
 seednode=random.randint(0,numberofnodes)
@@ -28,10 +32,23 @@ for i in range(10):
     nodes[seednode]["pieces"].append(piece)
 
 nodes[seednode]["id"]=1
+deletesizes=[]
+times=[]
+
+for i in range(50,200,10):
+    sim=NetworkSimulation(topology=G,agent_type=randompeerfailure,states=nodes,
+                         num_trials=1,max_time=i,logging_interval=1.0,environmentparams={"time":i})
 
 
-sim=NetworkSimulation(topology=G,agent_type=randompeerfailure,states=nodes,
-                     num_trials=10,max_time=30,logging_interval=1.0)
+    sim.run_simulation()
 
+    if i in faileddict.keys():
+        deletesizes.append(len(faileddict[i]))
+    else:
+        deletesizes.append(0)
+    times.append(i)
 
-sim.run_simulation()
+plt.bar(times,deletesizes,width=5)
+plt.xlabel('times')
+plt.ylabel('Number of failures')
+plt.savefig('bittorrentrandomfailures.png')
