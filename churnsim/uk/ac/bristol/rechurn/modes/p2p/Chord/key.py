@@ -4,4 +4,10 @@ class key:
         self.id=chord_hash(keystring)
         self.predecessor=predecessor
         self.successor=successor
+    def assignsuccesor(self,succesor):
+        self.successor=succesor
+
+    def assignpredecessor(self,predecessor):
+        self.predecessor=predecessor
+
     

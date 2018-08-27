@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "name": "motor-1",
+      "actuatorType": "MOTOR",
+      "type": "ACTUATOR"
+    }
+  ]
+}

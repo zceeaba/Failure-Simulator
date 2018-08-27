@@ -6,6 +6,10 @@ import networkx as nx
 #http://iptps06.cs.ucsb.edu/papers/Guha-skype06.pdf
 #https://www.globus.org/sites/default/files/gnutella.01.pdf
 #Characterizing Churn in Gnutella Network in a New Aspect
+#https://pdfs.semanticscholar.org/presentation/5b69/f772d9185860f2dc97661e90c275fed3582c.pdf
+#http://people.cs.uchicago.edu/~matei/PAPERS/gnutella-rc.pdf
+#https://ieeexplore.ieee.org/document/730882/
+#https://www.backblaze.com/b2/hard-drive-test-data.html
 
 
 RANDOM_SEED = 42
