@@ -7,13 +7,18 @@ class Fingers:
         tempnode=node
         while(i<self.m):
             succesor=tempnode.getsuccesor()
+            if i > self.m:
+                break
             while(succesor is not None):
                 sumvalue = node.Nodeid + 2 ** (i-1)
                 if succesor.Nodeid>sumvalue:
                     node.fingertable[i]=succesor
                     i=i+1
+                    if i>self.m:
+                        break
                 else:
                     tempnode=succesor
                     break
+
 
         print(node)
