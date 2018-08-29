@@ -1,7 +1,7 @@
 from churnsim.uk.ac.bristol.rechurn.failure_mode import FailureMode
 from churnsim.uk.ac.bristol.rechurn.topology import Topology
 from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.Node import Node
-from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.key import key
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.Key import Key
 from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.Ring import Ring
 
 
@@ -29,6 +29,7 @@ class ChordFailures(FailureMode):
         listofips = []
 
         listofips.append(start_ip)
+
         while temp != end:
             start[3] += 1
             for i in (3, 2, 1):
@@ -44,6 +45,7 @@ class ChordFailures(FailureMode):
         nx.draw(topology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
         plt.show()
 
+
     def get_new_topology(self, topology):
         if not isinstance(topology, Topology):
             raise ValueError('topology argument is not of type ' + type(topology))
@@ -52,15 +54,24 @@ class ChordFailures(FailureMode):
         to_be_deleted = []
 
         keys=[self.id_generator() for i in range(0,30)]
-        nodes=self.ip_generator("192.168.1.0", "192.171.3.25")
+        nodes=self.ip_generator("192.168.1.0", "192.168.1.30")
 
         ring=Ring()
 
         for node in nodes:
             newNode=Node(node)
-            ring.nodeslist.append(newNode)
+            ring.nodejoin(newNode)
 
-        print(ring.nodeslist)
+        ring.ringordering()
+        ring.createsuccesors()
+
+
+        for key in keys:
+            newkey=Key(key)
+            ring.keyadd(newkey)
+
+        self.lookuperrors(ring)
+
 
 
 
