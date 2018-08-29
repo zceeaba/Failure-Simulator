@@ -4,10 +4,14 @@ class key:
         self.id=chord_hash(keystring)
         self.predecessor=predecessor
         self.successor=successor
+        self.nodelist=[]
+
     def assignsuccesor(self,succesor):
         self.successor=succesor
 
     def assignpredecessor(self,predecessor):
         self.predecessor=predecessor
 
-    
+    def addnode(self,node):
+        self.nodelist.append(node)
+

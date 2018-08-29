@@ -1,4 +1,4 @@
-class ring:
+class Ring:
     def __init__(self):
         self.nodeslist=[]
 
@@ -10,5 +10,4 @@ class ring:
         self.nodeslist.pop()
 
     def updaterouting(self):
-        print("TO finish")
-        self.updaterouting()
+        print("to do")
