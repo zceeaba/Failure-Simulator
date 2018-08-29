@@ -3,6 +3,8 @@ from churnsim.uk.ac.bristol.rechurn.topology import Topology
 from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.Node import Node
 from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.Key import Key
 from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.Ring import Ring
+from churnsim.uk.ac.bristol.rechurn.modes.p2p.Chord.Fingers import Fingers
+
 
 
 import numpy as np
@@ -45,6 +47,12 @@ class ChordFailures(FailureMode):
         nx.draw(topology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
         plt.show()
 
+    def lookuperrors(self,ring):
+        t=0
+        while(t<30):
+            keys=ring.keyslist
+            chosenkey=random.choice(keys)
+
 
     def get_new_topology(self, topology):
         if not isinstance(topology, Topology):
@@ -65,6 +73,15 @@ class ChordFailures(FailureMode):
         ring.ringordering()
         ring.createsuccesors()
 
+        for node in ring.nodeslist:
+            finger=Fingers(3)
+            if node.getsuccesor() is not None:
+                finger.generatefinger(node)
+            else:
+                node.assignsuccesor(ring.ringorder[0])
+                node.fingertable[1]=0
+                node.fingertable[2]=0
+                node.fingertable[3]=0
 
         for key in keys:
             newkey=Key(key)
