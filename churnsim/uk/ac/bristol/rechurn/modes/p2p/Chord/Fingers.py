@@ -21,4 +21,3 @@ class Fingers:
                     break
 
 
-        print(node)

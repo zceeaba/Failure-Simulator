@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1d36c19-c2df-4afd-83be-9c93a0253266" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/churnsim/test/chordtest.py" afterPath="$PROJECT_DIR$/churnsim/test/chordtest.py" />
+      <change beforePath="$PROJECT_DIR$/churnsim/test/hardware.png" afterPath="$PROJECT_DIR$/churnsim/test/hardware.png" />
+      <change beforePath="$PROJECT_DIR$/churnsim/test/softwarefailuretest.py" afterPath="$PROJECT_DIR$/churnsim/test/softwarefailuretest.py" />
+      <change beforePath="$PROJECT_DIR$/churnsim/test/weibullfailuretest.py" afterPath="$PROJECT_DIR$/churnsim/test/weibullfailuretest.py" />
+      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/DiskFailures.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/DiskFailures.py" />
+      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/software.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/software.py" />
+      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network.png" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network.png" />
+      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network_failure_simulator.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network_failure_simulator.py" />
+      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/wc_results.txt" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/wc_results.txt" />
       <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Fingers.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Fingers.py" />
+      <change beforePath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/chord.py" afterPath="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/chord.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,16 +24,21 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Failure_Simulator$testsomethingrandom.coverage" NAME="testsomethingrandom Coverage Results" MODIFIED="1535549326461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Failure_Simulator$chordtest.coverage" NAME="chordtest Coverage Results" MODIFIED="1535560030409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/test" />
+    <SUITE FILE_PATH="coverage/Failure_Simulator$weibullfailuretest.coverage" NAME="weibullfailuretest Coverage Results" MODIFIED="1535590746588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/test" />
+    <SUITE FILE_PATH="coverage/Failure_Simulator$network_failure_simulator.coverage" NAME="network_failure_simulator Coverage Results" MODIFIED="1535601913533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures" />
+    <SUITE FILE_PATH="coverage/Failure_Simulator$chordtest.coverage" NAME="chordtest Coverage Results" MODIFIED="1535608844669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/test" />
+    <SUITE FILE_PATH="coverage/Failure_Simulator$softwarefailuretest.coverage" NAME="softwarefailuretest Coverage Results" MODIFIED="1535582083145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/churnsim/test" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Fingers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Fingers.py">
+      <file leaf-file-name="chord.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/chord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="-162">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#67#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -30,18 +46,8 @@
       <file leaf-file-name="Node.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Key.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Key.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="270">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,13 +65,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chord.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/chord.py">
+      <file leaf-file-name="chordtest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/churnsim/test/chordtest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2403">
-              <caret line="89" column="31" lean-forward="false" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+            <state relative-caret-position="135">
+              <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding>
-                <element signature="e#0#67#0" expanded="true" />
+                <element signature="e#0#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,6 +111,9 @@
       <find>finished sim</find>
       <find>NetworkEnvironment</find>
       <find>time</find>
+      <find>times</find>
+      <find>self.times</find>
+      <find>30</find>
     </findStrings>
     <replaceStrings>
       <replace>pd</replace>
@@ -137,16 +146,11 @@
         <option value="$PROJECT_DIR$/churnsim/test/random_failure_test.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/SelectionBasedFailures/random_mode.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/Gossip.py" />
-        <option value="$PROJECT_DIR$/churnsim/test/softwarefailuretest.py" />
         <option value="$PROJECT_DIR$/churnsim/test/hardwarefailuretest.py" />
         <option value="$PROJECT_DIR$/churnsim/test/interleavingfailures.py" />
         <option value="$PROJECT_DIR$/churnsim/failuretest.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/graph_methods.py" />
         <option value="$PROJECT_DIR$/churnsim/test/sim_01/readpickle.py" />
-        <option value="$PROJECT_DIR$/churnsim/test/weibullfailuretest.py" />
-        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/software.py" />
-        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network_failure_simulator.py" />
-        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/DiskFailures.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/nxsim/simulation.py" />
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/nxsim/environment.py" />
         <option value="$PROJECT_DIR$/churnsim/test/randompeerselectiontest.py" />
@@ -158,15 +162,20 @@
         <option value="$PROJECT_DIR$/Failuremonitor/monitor/src/App.js" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/key.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/ring.py" />
-        <option value="$PROJECT_DIR$/churnsim/test/chordtest.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/hash.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Key.py" />
         <option value="$PROJECT_DIR$/testsomethingrandom.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/twowaydict.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Ring.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Node.py" />
-        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/chord.py" />
+        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/software.py" />
+        <option value="$PROJECT_DIR$/churnsim/test/softwarefailuretest.py" />
+        <option value="$PROJECT_DIR$/churnsim/test/weibullfailuretest.py" />
+        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/DiskFailures.py" />
+        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network_failure_simulator.py" />
         <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Fingers.py" />
+        <option value="$PROJECT_DIR$/churnsim/test/chordtest.py" />
+        <option value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/chord.py" />
       </list>
     </option>
   </component>
@@ -269,6 +278,17 @@
               <item name="bristol" type="462c0819:PsiDirectoryNode" />
               <item name="rechurn" type="462c0819:PsiDirectoryNode" />
               <item name="modes" type="462c0819:PsiDirectoryNode" />
+              <item name="CloudFailures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Failure Simulator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Failure Simulator" type="462c0819:PsiDirectoryNode" />
+              <item name="churnsim" type="462c0819:PsiDirectoryNode" />
+              <item name="uk" type="462c0819:PsiDirectoryNode" />
+              <item name="ac" type="462c0819:PsiDirectoryNode" />
+              <item name="bristol" type="462c0819:PsiDirectoryNode" />
+              <item name="rechurn" type="462c0819:PsiDirectoryNode" />
+              <item name="modes" type="462c0819:PsiDirectoryNode" />
               <item name="p2p" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -347,39 +367,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="randompeerselectiontest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="network_failure_simulator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/churnsim/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Failure Simulator" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/churnsim/test/randompeerselectiontest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="readpickle" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/churnsim/test/sim_01" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Failure Simulator" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/churnsim/test/sim_01/readpickle.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network_failure_simulator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -423,17 +424,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="weibullfailuretest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/churnsim/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Failure Simulator" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/churnsim/test/weibullfailuretest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.randompeerselectiontest" />
-      <item index="1" class="java.lang.String" itemvalue="Python.readpickle" />
-      <item index="2" class="java.lang.String" itemvalue="Python.softwarefailuretest" />
-      <item index="3" class="java.lang.String" itemvalue="Python.chordtest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.testsomethingrandom" />
+      <item index="0" class="java.lang.String" itemvalue="Python.softwarefailuretest" />
+      <item index="1" class="java.lang.String" itemvalue="Python.chordtest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.testsomethingrandom" />
+      <item index="3" class="java.lang.String" itemvalue="Python.weibullfailuretest" />
+      <item index="4" class="java.lang.String" itemvalue="Python.network_failure_simulator" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.chordtest" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testsomethingrandom" />
+        <item index="1" class="java.lang.String" itemvalue="Python.network_failure_simulator" />
+        <item index="2" class="java.lang.String" itemvalue="Python.weibullfailuretest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.softwarefailuretest" />
+        <item index="4" class="java.lang.String" itemvalue="Python.testsomethingrandom" />
       </list>
     </recent_temporary>
   </component>
@@ -497,7 +520,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18880351" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18880351" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32491767" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19114584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -505,7 +528,7 @@
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43854168" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="503" y="125" width="842" height="739" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -529,9 +552,9 @@
           <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/chord.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="198" />
+          <url>file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network_failure_simulator.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="219" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -541,39 +564,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="215" />
+      <option name="time" value="245" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/Task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/1194569904/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="3694" column="8" lean-forward="false" selection-start-line="3694" selection-start-column="8" selection-end-line="3694" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/SelectionBasedFailures/random_mode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/test/random_failure_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/churnsim/test/rankbasedfailure_test.py" />
     <entry file="file://$PROJECT_DIR$/churnsim/test/interleavingfailures.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -700,59 +695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/test/softwarefailuretest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/software.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-621">
-          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/Gossip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/test/weibullfailuretest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/DiskFailures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Gnutella/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/graph_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network_failure_simulator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="82" column="9" lean-forward="false" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -794,16 +740,6 @@
         <state relative-caret-position="81">
           <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/test/hardwarefailuretest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="50" lean-forward="true" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -849,18 +785,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/test/chordtest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/twowaydict.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/test/hardfailureratio.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/test/hardwarefailuretest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="50" lean-forward="true" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#60#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/software.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1002">
+          <caret line="79" column="30" lean-forward="false" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding>
+            <element signature="e#401#468#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/test/softwarefailuretest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#60#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/DiskFailures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1353">
+          <caret line="83" column="42" lean-forward="true" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/test/weibullfailuretest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/DistributionBased/SoftwareFailures/Gossip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="0" column="55" lean-forward="false" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/links.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/pe_traffic.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/graph_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/CloudFailures/NetworkFailures/network_failure_simulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Fingers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -875,9 +907,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+        <state relative-caret-position="270">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/churnsim/test/chordtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -891,18 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/Fingers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/churnsim/uk/ac/bristol/rechurn/modes/p2p/Chord/chord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2403">
-          <caret line="89" column="31" lean-forward="false" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+        <state relative-caret-position="-162">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#67#0" expanded="true" />
           </folding>

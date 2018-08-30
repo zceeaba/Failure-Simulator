@@ -23,7 +23,7 @@ def generatecombinations(data):
 	return comblist
 
 G = nx.DiGraph() #Create an empty graph with no nodes and no edges.
-TR_OUT=[i for i in range(20,40,10)]
+TR_OUT=[i for i in range(10,40,10)]
 combtrout=generatecombinations(TR_OUT)
 
 #for subset in itertools.combinations(TR_OUT,3):
@@ -84,6 +84,7 @@ while tf<len(combtrout):
 		#plt.show()
 
 	wc_util = x.Worst_Case_Util(wc_link_util)
+
 #pprint(wc_util)
 #print(result_file, "Worst case link utilisations:")
 #pprint (wc_util,result_file)

@@ -13,13 +13,15 @@ import networkx as nx
 from matplotlib import pyplot as plt
 import string
 import random
-random.seed(3)
+random.seed(50)
 
 
 ##https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf
 
 
 class ChordFailures(FailureMode):
+    def __init__(self,time):
+        self.time=time
 
     def id_generator(self,size=6, chars=string.ascii_uppercase):
         return ''.join(random.choice(chars) for _ in range(size))
@@ -47,11 +49,55 @@ class ChordFailures(FailureMode):
         nx.draw(topology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
         plt.show()
 
+    def startiterativesearch(self,key,node):
+        foundnode=None
+        print(key)
+        while node.Nodeid<key.id:
+            fingertable=node.fingertable
+            if fingertable[1] == 0:
+                foundnode = None
+                break
+            if node.Nodeid>=key.id:
+                foundnode=node
+                break
+            for i in fingertable:
+                if fingertable[i].Nodeid>=key.id:
+                    foundnode=fingertable[i]
+                    break
+
+            if foundnode:
+                break
+            else:
+                length=len(node.fingertable.keys())
+                node=node.fingertable[length]
+
+
+        return foundnode
+
     def lookuperrors(self,ring):
         t=0
-        while(t<30):
+        foundcount=0
+        while(t<self.time):
             keys=ring.keyslist
             chosenkey=random.choice(keys)
+            node=ring.ringorder[0]
+            failurenode=random.choice(ring.nodeslist)
+            ring.nodeslist.remove(failurenode)
+
+            ring.ringordering()
+            foundnode=self.startiterativesearch(chosenkey,node)
+            if foundnode is None:
+                foundnode =ring.ringorder[0]
+
+            if chosenkey in foundnode.keyslist:
+                foundcount+=1
+            else:
+                print("not found",chosenkey.id)
+            t+=1
+
+        return foundcount
+
+
 
 
     def get_new_topology(self, topology):
@@ -87,7 +133,9 @@ class ChordFailures(FailureMode):
             newkey=Key(key)
             ring.keyadd(newkey)
 
-        self.lookuperrors(ring)
+        foundcount=self.lookuperrors(ring)
+
+        return foundcount
 
 
 

@@ -11,13 +11,15 @@ import networkx as nx
 from matplotlib import pyplot as plt
 from churnsim.uk.ac.bristol.rechurn.modes.CloudFailures.DistributionBased.SoftwareFailures.Gossip import GossipNode
 from churnsim.uk.ac.bristol.rechurn.modes.CloudFailures.DistributionBased.SoftwareFailures.Task import Task
+from scipy import optimize
 
 
 
 class SoftwareFailures(FailureMode):
 
-    def __init__(self,capacities=None):
+    def __init__(self,time,capacities=None):
         self.capacities=capacities
+        self.time=time
 
     def draw_topology(self,topology):
         pos = nx.spring_layout(topology)
@@ -52,13 +54,13 @@ class SoftwareFailures(FailureMode):
                 graphtogossip[x]=GossipNode(x,capacities[count])
                 count+=1
 
-            workload = self.generateworkloadsizes(30)
+            workload = self.generateworkloadsizes(self.time)
 
             deletecount=0
             #start monte carlo loop
             t=0
 
-            while t<30:
+            while t<self.time:
                 chosenindex=random.randint(0,(len(new_topology.nodes)-1))
                 chosennode=GossipNodelist[chosenindex]
                 gpobject=graphtogossip[chosennode]
@@ -75,11 +77,7 @@ class SoftwareFailures(FailureMode):
             print(deletecount)
             deletecountlist.append(deletecount)
 
-        plt.bar(capastarts,deletecountlist, width=50)
-        plt.xlabel('capacity')
-        plt.ylabel('number of node failures')
-        plt.plot()
-        plt.savefig('software.png')
+            return deletecount
 
 
 

@@ -9,10 +9,10 @@ from matplotlib import pyplot as plt
 #https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201209ra1.html
 
 class weibullfailures(FailureMode):
-    def __init__(self,mttfalgorithm):
-        self.times={}
+    def __init__(self,mttfalgorithm,time):
         self.survived=False
         self.mttfalgorithm=mttfalgorithm
+        self.time=time
 
     def core_survived(self,percent):
         survived = False
@@ -78,7 +78,7 @@ class weibullfailures(FailureMode):
         if self.mttfalgorithm==True:
             t=0
             nodeslist=list(new_topology.nodes)
-            while(t<30):
+            while(t<self.time):
                 count=0
                 for i in failuretimes:
                     if failuretimes[i]==t:
