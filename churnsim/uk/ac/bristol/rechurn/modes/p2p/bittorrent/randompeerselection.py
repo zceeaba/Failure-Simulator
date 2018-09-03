@@ -9,16 +9,16 @@ import random
 
 #https://web.njit.edu/~dingxn/papers/BT-JSAC.pdf
 #https://pdfs.semanticscholar.org/c16b/76c591f911672daf785aa5f601baff4b2ce6.pdf
-faileddict={}
 
 class randompeerfailure(BaseNetworkAgent):
     def __init__(self,environment,agent_id=0,state=()):
         super().__init__(environment=environment,agent_id=agent_id,state=state)
         self.datauploadmin=1000
-        self.bite_prob=0.25
+        self.bite_prob=0.05
         self.hashdata=string.ascii_letters
         self.environment=environment
         self.time=environment.environment_params["environmentparams"]["time"]
+        self.faileddict=environment.environment_params["environmentparams"]["faileddict"]
 
 
     def autopopulate(self,data,span):
@@ -40,13 +40,14 @@ class randompeerfailure(BaseNetworkAgent):
     def startmessaging(self):
         normal_neighbors = self.get_neighboring_agents(state_id=0)
         all_neighbors=self.get_all_agents()
+        all_neighbors=self.get_all_agents()
         currenttime=self.env.now
         totaltime=self.time
         deletednodes = []
         for i in all_neighbors:
             if currenttime==(self.time)/2 and i.state['downloadspeed']==0 and i.state["uploadspeed"]==0:
                 deletednodes.append(i)
-                faileddict[self.time]=deletednodes
+                self.faileddict[self.time]=deletednodes
 
 
         normal_neighbors = self.get_neighboring_agents(state_id=0)

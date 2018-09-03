@@ -27,7 +27,7 @@ class SoftwareFailures(FailureMode):
         plt.show()
 
     def generateworkloadsizes(self,size):
-        ws = [Task(i, random.randint(100, 150)) for i in range(0, size)]
+        ws = [Task(i, random.randint(2000, 2500)) for i in range(0, size)]
         return ws
 
 
@@ -37,7 +37,7 @@ class SoftwareFailures(FailureMode):
             raise ValueError('topology argument is not of type ' + type(topology))
         """
         deletecountlist=[]
-        capastarts=[i for i in range(10,1000,10)]
+        capastarts=[i for i in range(100,500,100)]
 
 
 

@@ -54,7 +54,7 @@ class ChordFailures(FailureMode):
         print(key)
         while node.Nodeid<key.id:
             fingertable=node.fingertable
-            if fingertable[1] == 0:
+            if len(fingertable.keys()) == 0:
                 foundnode = None
                 break
             if node.Nodeid>=key.id:
@@ -82,9 +82,12 @@ class ChordFailures(FailureMode):
             chosenkey=random.choice(keys)
             node=ring.ringorder[0]
             failurenode=random.choice(ring.nodeslist)
-            ring.nodeslist.remove(failurenode)
+            length=len(failurenode.fingertable.keys())
+            if length>0:
+                del failurenode.fingertable[length]
 
-            ring.ringordering()
+            #ring.ringordering()
+
             foundnode=self.startiterativesearch(chosenkey,node)
             if foundnode is None:
                 foundnode =ring.ringorder[0]
@@ -95,7 +98,7 @@ class ChordFailures(FailureMode):
                 print("not found",chosenkey.id)
             t+=1
 
-        return foundcount
+        return self.time-foundcount
 
 
 
