@@ -26,8 +26,8 @@ G = nx.DiGraph() #Create an empty graph with no nodes and no edges.
 TR_OUT=[i for i in range(10,40,10)]
 combtrout=generatecombinations(TR_OUT)
 
-#for subset in itertools.combinations(TR_OUT,3):
-#	combtrout.append(subset)
+for subset in itertools.combinations(TR_OUT,3):
+	combtrout.append(subset)
 
 
 numberdeleted=[]
@@ -42,12 +42,12 @@ while tf<len(combtrout):
 	nodes = G.nodes()
 	links = G.edges()
 	result_file = open('wc_results.txt',"w")
-	#print(result_file, "Created graph with the following nodes:")
+	print(result_file, "Created graph with the following nodes:")
 	pprint(nodes,result_file)
-	#print(result_file, "Created graph with the following links:")
+	print(result_file, "Created graph with the following links:")
 	pprint(links,result_file)
 
-	#plt.savefig('topology_result.png')
+	plt.savefig('topology_result.png')
 	x = graph_methods.GraphSolve() #create a new instance of a class
 	autotraffic=combtrout[tf]
 	print(autotraffic)
@@ -58,8 +58,8 @@ while tf<len(combtrout):
 
 	wc_link_util = {} # list containing node_a - node_b link tuples and traffic levels for every failure
 	links=list(links)
-	#nx.draw(G)
-	#plt.show()
+	nx.draw(G)
+	plt.show()
 
 	newtopology=G.copy()
 	deletelist=[]
@@ -75,33 +75,32 @@ while tf<len(combtrout):
 		G.add_edge(*link_to_remove_1)
 		G.add_edge(*link_to_remove_2)
 		print(link_to_remove_1,link_to_remove_2)
-		#if wc_link_util[link_to_remove_1][]
 		for i in wc_link_util[link_to_remove_1]:
 			if wc_link_util[link_to_remove_1][i]>=10 and (i not in deletelist):
 				newtopology.remove_edge(*i)
 				deletelist.append(i)
-		#nx.draw(newtopology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
-		#plt.show()
+		nx.draw(newtopology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
+		plt.show()
 
 	wc_util = x.Worst_Case_Util(wc_link_util)
 
-#pprint(wc_util)
-#print(result_file, "Worst case link utilisations:")
-#pprint (wc_util,result_file)
+	pprint(wc_util)
+	print(result_file, "Worst case link utilisations:")
+	pprint (wc_util,result_file)
 
-#pprint (wc_link_util)
+	pprint (wc_link_util)
 
-#pprint(len(deletelist))
+	pprint(len(deletelist))
 	numberdeleted.append(len(deletelist))
 
-"""
+
 combtroutxindices=[i[0] for i in combtrout]
 combtroutyindices=[i[1] for i in combtrout]
 combtroutzindices=[i[2] for i in combtrout]
 plt.scatter(numberdeleted,combtroutxindices)
 plt.scatter(numberdeleted,combtroutyindices)
 plt.scatter(numberdeleted,combtroutzindices)
-"""
+
 combtroutindices=[i for i in range(len(combtrout))]
 plt.scatter(combtroutindices,numberdeleted)
 plt.xlabel('Configuration mode')

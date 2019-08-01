@@ -27,7 +27,7 @@ class hardwarefailure(FailureMode):
         nx.draw(topology, pos, with_labels=True, arrows=True, node_size=1000)  # generic graph layout
         plt.show()
 
-        """
+        
         workload={}
         nodereliability={}
 
@@ -51,7 +51,7 @@ class hardwarefailure(FailureMode):
                 nodereliability[x]=reliabilitysum
 
         deleteweibull=self.calculateweibull()
-        """
+        
 
         return topology
 

@@ -26,15 +26,6 @@ class RandomFailures(FailureMode):
 
             nodes=topology.nodes
 
-            """
-            pos = nx.spring_layout(topology)
-            nx.draw(topology, pos, with_labels=True, arrows=False, node_size=1000)  # generic graph layout
-            nodelist = [x for x in nodes if re.search('pe[0-9]', x)]  # create a list containing PE nodes only
-            nx.draw_networkx_nodes(topology, pos, nodelist=nodelist, node_color='b',
-                                   node_size=1000)  # change PE node colour to blue
-            nx.draw_networkx_edge_labels(topology, pos)  # draw edge labels
-            plt.savefig('topology_result.png')
-            """
 
             to_be_deleted = []
             for i in range(0, int(num_nodes)):

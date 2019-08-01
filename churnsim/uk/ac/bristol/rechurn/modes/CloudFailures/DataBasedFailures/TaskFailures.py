@@ -20,9 +20,13 @@ class softwarefailure(FailureMode):
     def checkforfailures(self,jobdata):
         for x in jobdata:
             print(jobdata[x]["Time"])
-            #timetaken=jobdata["Time"]
-        #ts=workload/mips
-        return True
+            timetaken=jobdata["Time"]
+        ts=workload/mips
+		
+		if ts>timetaken:
+			return True
+		else:
+			return False
 
     def get_new_topology(self, topology):
         if not isinstance(topology, Topology):
@@ -32,7 +36,6 @@ class softwarefailure(FailureMode):
 
         deletenodes=[]
 
-        #jobdict=UniqueDict.fromkeys(topology.nodes)
         keylist=list(set(topology.nodes))
         jobdict=dict.fromkeys(keylist)
         for i in jobdict.keys():
@@ -45,16 +48,12 @@ class softwarefailure(FailureMode):
         newdict={}
         for j in jobdict.keys():
             attributes=jobdict[j]
-            #print(len(attributes[0]))
             if len(attributes[0])>1:
                 count+=1
                 newdict[j]=attributes
                 self.checkforfailures(attributes[0])
 
                 print(newdict)
-
-
-
 
         return topology
 

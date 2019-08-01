@@ -65,8 +65,8 @@ class weibullfailures(FailureMode):
         plt.show()
 
     def get_new_topology(self, topology):
-        #if not isinstance(topology, Topology):
-         #   raise ValueError('topology argument is not of type ' + type(topology))
+        if not isinstance(topology, Topology):
+            raise ValueError('topology argument is not of type ' + type(topology))
         pos = nx.spring_layout(topology)
         new_topology = topology.copy()
         to_be_deleted = []
@@ -84,7 +84,7 @@ class weibullfailures(FailureMode):
                         new_topology.remove_node(nodeslist[count])
                         deletelength+=1
                     count+=1
-                #self.draw_topology(pos,new_topology)
+                self.draw_topology(pos,new_topology)
                 t=t+1
 
         else:

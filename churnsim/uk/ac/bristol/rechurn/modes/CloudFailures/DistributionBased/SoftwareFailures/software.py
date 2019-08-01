@@ -32,10 +32,8 @@ class SoftwareFailures(FailureMode):
 
 
     def get_new_topology(self, topology):
-        """
         if not isinstance(topology, Topology):
             raise ValueError('topology argument is not of type ' + type(topology))
-        """
         deletecountlist=[]
         capastarts=[i for i in range(100,500,100)]
 
@@ -57,6 +55,7 @@ class SoftwareFailures(FailureMode):
             workload = self.generateworkloadsizes(self.time)
 
             deletecount=0
+			
             #start monte carlo loop
             t=0
 
@@ -71,7 +70,7 @@ class SoftwareFailures(FailureMode):
                     GossipNodelist = list(new_topology.nodes)
                     deletecount+=1
 
-                #self.draw_topology(new_topology)
+                self.draw_topology(new_topology)
                 t=t+1
 
             print(deletecount)
